@@ -1,23 +1,3 @@
-# node-Small-program
-https://lewiscutey.github.io/node-Small-program
-##开发node 小程序（new命令-创建js/img/css/index.html）
-###1.npm init 配置json文件
-{
-  "name": "new",
-  "version": "1.0.0",
-  "description": "",
-  "main": "mk.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "lewis",
-  "license": "ISC",
-  "bin":{
-    "new":"./mk.js"
-  }
-}
-
-###2.小程序基本主文件
 var fs = require("fs");
 function mkdir(path) {
     var arr = path.split("/");
@@ -54,11 +34,3 @@ function mkdir(path) {
     })
 }
 module.exports.mkdir = mkdir;
-###3.小程序入口文件
-#!C:\nodejs\node.exe
-var mk = require("./mkdir.js");
-mk.mkdir("js/index.js");
-mk.mkdir("css/index.css");
-mk.mkdir("img");
-mk.mkdir("index.html");
-####万事俱备只欠安装node基本模块，运行入口文件了.
